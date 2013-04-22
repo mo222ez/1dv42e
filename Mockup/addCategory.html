@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>1dv402e Menu version 1</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="stylesheet/stylesheet.css">
+        <link rel="stylesheet" href="stylesheet/form.css">
+        <link rel="stylesheet" href="stylesheet/menu.css">
+    </head>
+    <body>
+        <div id="log"><button>Logga ut</button></div>
+        
+		<header></header>
+
+        <div id="menuContainer">
+                <nav id="mainMenu">
+                	<li><a href="start.html">Start</a></li>
+                	<li><a href="product.html">Produkter</a></li>
+                	<li><a href="category.html" class="active">Kategorier</a></li>
+                	<li><a href="order.html">Beställningar</a></li>
+                	<li><a href="customer.html">Kunder</a></li>
+                	<li><a href="statistics.html">Statistik</a></li>
+                	<li><a href="install.html">Inställningar</a></li>
+                </nav> 
+
+            <nav id="subMenu">
+                <ul class="subMenu"><li><a href="addCategory.html" class="active">Lägg till en ny kategori</a></li></ul>
+            </nav>
+        </div>
+
+		<div id="wrapper">
+            <section>
+                <article>
+                    <form id='registerForm' method='POST'>                      
+                        <label for='customername'>Kundnamn: </label>
+                        <input name='customername' type='text' id='customername' class='orig' value=''>
+                                             
+                        <label for='onr'>Organisationsnr: </label>
+                        <input name='onr' type='text' id='onr' class='orig' value=''>
+                                            
+                        <label for='customertype'>Kundtyp: </label>
+                        <select name='customertype'>
+                            <option value='1'>Företag</option>
+                            <option value='2'>Privat</option>
+                        </select>
+                        
+
+                        <h3>Kontaktuppgifter:</h3>    
+                        <label for='adress'>Adress: </label>                                
+                        <input name='adress' type='text' id='adress' class='orig' value=''>
+                    
+                        <label for='postalcode'>Postnummer: </label>
+                        <input name='postalcode' type='text' id='postalcode' class='orig' value=''>
+                    
+                        <label for='city'>Ort: </label>
+                        <input name='city' type='text' id='city' class='orig' value=''>                   
+
+                        <label for='phone'>Telefonnr: </label>                              
+                        <input name='phone' type='text' id='phone' class='orig' value=''>                           
+
+                        <label for='mail'>E-post: </label>                              
+                        <input name='mail' type='text' id='mail' class='orig' value=''>                         
+
+
+                        <h3>Användaruppgifter:</h3>
+                        <label for='username'>Anv&auml;ndarnamn: </label>
+                        <input name='username' type='text' id='username' class='orig' value=''>
+                                      
+                        <label for='password'>L&ouml;senord: </label>                               
+                        <input name='password' type='password' id='password' class='orig'>                          
+                        
+                        <label for='repeatPassword'>Upprepa l&ouml;senord: </label>                             
+                        <input name='repeatPassword' type='Password' id='repeatPassword' class='orig'>                          
+                        
+                
+                        <div id='registerButton'>
+                            <input id='register' name='register' type='submit' value='Lägg till' class='btn btn-success'>
+                        </div>
+                    </form>     
+                </article>
+            </section>
+        <div class="clearBottomContainers"></div>
+        </div>
+
+        <footer>
+            <div id="topBorderPointer"></div>
+            <div id="somethingSomethingDarkSide">
+                <p class="footerText"> Här kan vi lägga in fin fin information om vad fasen som heltst. Något som skulle passa in helt enkelt. Lite mera informaton som kan vara behövlig, till exempel hur man får tag på oss som utvecklare om de har några frågor eller så.</p>
+            </div>
+
+                                    
+            <div id="someone">
+                <p class="footerText">Copyright MaDEastman 2013</p>
+            </div>
+        </footer>
+
+       
+    </body>
+</html>

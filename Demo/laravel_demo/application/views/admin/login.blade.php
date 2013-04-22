@@ -1,0 +1,1 @@
+This is the /Users/micke/Documents/Dropbox/EXAMENS ARBETE/Git/Demo/laravel_demo/application/views/admin/login.blade.php view

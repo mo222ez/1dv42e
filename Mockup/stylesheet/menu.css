@@ -1,0 +1,83 @@
+#mainMenu {
+ 	min-height: 40px;
+ 	width: 100%;
+ 	list-style: none; 	
+ 	float: left;
+ 	border-bottom: 1px solid #cccccc;
+ 	padding-top: 10px;
+ 	padding-left: 10px;
+ 	overflow: hidden;
+ }
+
+
+	#mainMenu li {
+		width: auto;
+		height: auto;
+		padding: 0px;
+		float: left;
+		text-align: center;
+		border-right: 1px solid #cccccc;
+	}
+
+	#mainMenu li a {
+		width: 150px;
+		height: 20px;
+		font-size: 15pt;
+		display: block;
+		color: #000000;
+		padding: 5px;
+ 		font-family: serif;
+ 		text-align: center;
+ 		text-decoration: none;
+	}
+
+	.active {
+		color: blue;
+		text-decoration: underline;
+		background-color: #fd44f2;
+	}
+
+	#mainMenu li a:hover {
+		color: #ffffff;
+		background-color: #a044fd;
+	}
+
+#subMenu {
+ 	min-height: 40px;
+ 	width: 100%;
+ 	list-style: none; 	
+ 	float: left;
+ 	border-bottom: 1px solid #cccccc;
+ 	padding-top: 10px;
+ 	padding-left: 10px;
+ 	overflow: hidden;
+ }	
+
+#subMenu li {
+		width: auto;
+		height: auto;
+		padding: 0px;
+		float: left;
+		margin: 0 10px 0 10px;
+		text-align: center;
+		border-right: 1px solid #cccccc;
+	}
+
+	#subMenu li a {
+		width: 200px;
+		height: 20px;
+		display: block;
+		font-size: 15pt;
+		color: #000000;
+		padding: 5px;
+ 		font-family: serif;
+ 		text-align: center;
+ 		text-decoration: none;
+	}
+
+	#subMenu li a:hover {
+		color: #ffffff;
+		background-color: #a044fd;
+	}
+
+
