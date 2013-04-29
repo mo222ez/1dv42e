@@ -36,15 +36,15 @@ class Admin_Controller extends Base_Controller {
 		return Redirect::to_route('home');
 	}
 
-	public function action_products()
+	/*public function action_products()
 	{
 		return View::make('admin.product.index');
-	}
+	}*/
 
-	public function action_categories()
+	/*public function action_categories()
 	{
 		return View::make('admin.category.index');
-	}
+	}*/
 
 	public function action_orders()
 	{
@@ -61,9 +61,9 @@ class Admin_Controller extends Base_Controller {
 		return View::make('admin.statistic.index');
 	}
 
-	public function action_settings()
+	/*public function action_settings()
 	{
 		return View::make('admin.settings.index');
-	}
+	}*/
 
 }

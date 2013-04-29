@@ -1,0 +1,1 @@
+<li><a href="{{ URL::to_route('admin_new_product') }}" class="{{ URI::is('admin/products/new*') ? 'active' : '' }}">Lägg till en ny produkt</a></li>

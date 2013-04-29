@@ -12,7 +12,7 @@ class Create_Products {
 		Schema::create('products', function($table){
 			$table->increments('id');
 			$table->string('name');
-			$table->text('desription');
+			$table->text('description');
 			$table->string('articlenr');
 			$table->integer('category_id');
 			$table->timestamps();

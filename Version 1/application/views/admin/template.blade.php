@@ -1,25 +1,3 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <title>
-      @yield('title')
-    </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{ Asset::styles() }}
-    {{ Asset::scripts() }}
-  </head>
-  <body>
-    <div class="container" id="main_container">
-      @if (Auth::user())
-        {{ HTML::link('logout', 'Logout') }}
-      @else
-        {{ HTML::link('login', 'Login') }}
-      @endif
-      @yield('main_content')
-    </div>
-  </body>
-</html> -->
-
 <!DOCTYPE html>
   <head>
       <meta charset="utf-8">
@@ -37,8 +15,9 @@
 
       <div id="log">
         <form method="link" action="{{ URL::to_route('admin_logout') }}">
-          <button type="submit">Logga ut</button>
+          <input class="btn btn-XS btn-primary" type="submit" value="Logga ut" />
         </form>
+
         <!--{{ HTML::link_to_route('admin_logout', 'Logga ut') }}-->
       </div>
 
@@ -49,7 +28,7 @@
 
     </div>
 
-    <header></header>
+    <header>Butiken.se</header>
       
     <div id="menuContainer">
       <nav id="mainMenu">
@@ -65,8 +44,7 @@
       <nav id="subMenu">
         <ul class="subMenu">
           @yield('submenu')
-        </ul>
-        <!-- <p>Undermenyn</p> -->
+        </ul>       
       </nav>
     </div>
 
@@ -82,7 +60,7 @@
 
                         
         <div id="someone">
-        <p class="footerText">Copyright MaDEastman 2013</p>
+        <p class="footerText">BUTIKEN.SE Copyright MaDEastman 2013</p>
       </div>
     </footer>       
   </body>

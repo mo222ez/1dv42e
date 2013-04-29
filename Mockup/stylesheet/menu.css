@@ -1,13 +1,31 @@
+/* --------------------------------------------------------------*/
+/* - GRUNDSTRUKTUREN TILL MENYN -------------------------------- */
+/* --------------------------------------------------------------*/
+#menuContainer {
+	min-height: 65px;
+ 	width: auto;
+ 	position: relative;
+ 	//background-color: #dfd9d9;
+ 	background-color: pink;
+ 	overflow: hidden;
+}
+
+/* --------------------------------------------------------------*/
+/* - HUVUD MENYN ----------------------------------------------- */
+/* --------------------------------------------------------------*/
 #mainMenu {
- 	min-height: 40px;
+ 	min-height: 32px;
  	width: 100%;
+ 	background-image: url("../layout/menuBg.png");
+ 	background-repeat: repeat-x; 
  	list-style: none; 	
  	float: left;
- 	border-bottom: 1px solid #cccccc;
- 	padding-top: 10px;
- 	padding-left: 10px;
+ 	border-top: 1px solid #545454;
+ 	border-bottom: 2px solid #1c1c1c;
+ 	padding-top: 8px;
+ 	padding-left: 20px;
  	overflow: hidden;
- }
+}
 
 
 	#mainMenu li {
@@ -15,69 +33,98 @@
 		height: auto;
 		padding: 0px;
 		float: left;
-		text-align: center;
-		border-right: 1px solid #cccccc;
+		text-align: center;	
 	}
 
-	#mainMenu li a {
-		width: 150px;
-		height: 20px;
-		font-size: 15pt;
-		display: block;
-		color: #000000;
-		padding: 5px;
- 		font-family: serif;
- 		text-align: center;
- 		text-decoration: none;
-	}
 
-	.active {
-		color: blue;
-		text-decoration: underline;
-		background-color: #fd44f2;
-	}
+		#mainMenu li a {
+			width: 110px;
+			height: 15px;
+			display: block;
+			padding: 5px;
 
-	#mainMenu li a:hover {
-		color: #ffffff;
-		background-color: #a044fd;
-	}
+			/* Texten till länkarna i huvudmenyn */
+			color: #ffffff;
+			font-size: 11pt;
+			font-family: Helvetica, sans-serif;
+			letter-spacing: 1px;
+			text-align: center;
+			text-decoration: none;			
+		}
 
+
+		/* Länken till den aktiva sidan. */
+		#mainMenu li .active {
+			color: #ffffff;
+			border-radius: 4px;
+			border-top: 1px solid #7bdbff;
+			border-bottom: 1px solid #024e7a;
+			background-image: url("../layout/buttonBg.png");
+			background-repeat: repeat-x;
+		}
+
+
+		/* När användaren klickar på en länk så byter den färg. */
+		#mainMenu li a:active {
+			color: #20aae2; /* Ljus blå */
+			text-decoration: underline;
+		}
+
+
+		/* När användaren för muspekaren över länken. */
+		#mainMenu li a:hover {
+			color: #4bc4f1; /* Ljus ljus blå */		
+		}
+
+
+
+/* --------------------------------------------------------------*/
+/* - UNDER MENYN ----------------------------------------------- */
+/* --------------------------------------------------------------*/
 #subMenu {
- 	min-height: 40px;
+ 	min-height: 20px;
  	width: 100%;
+ 	background-color: #dfd9d9;
  	list-style: none; 	
  	float: left;
- 	border-bottom: 1px solid #cccccc;
- 	padding-top: 10px;
- 	padding-left: 10px;
+ 	padding-top: 5px;
+ 	padding-left: 20px;
  	overflow: hidden;
- }	
+}	
 
-#subMenu li {
+
+	#subMenu li {
 		width: auto;
 		height: auto;
 		padding: 0px;
-		float: left;
-		margin: 0 10px 0 10px;
+		margin: 0px;
+		float: left;		
 		text-align: center;
-		border-right: 1px solid #cccccc;
-	}
-
-	#subMenu li a {
-		width: 200px;
-		height: 20px;
-		display: block;
-		font-size: 15pt;
-		color: #000000;
-		padding: 5px;
- 		font-family: serif;
- 		text-align: center;
- 		text-decoration: none;
-	}
-
-	#subMenu li a:hover {
-		color: #ffffff;
-		background-color: #a044fd;
-	}
+	}	
 
 
+		#subMenu li a {
+			min-width: 130px;
+			height: 15px;
+			display: block;
+			font-size: 10pt;
+			color: #000000;
+			padding: 5px;
+	 		font-family: serif;
+	 		text-align: center;
+	 		text-decoration: none;
+	 		border-bottom: 3px solid #dfd9d9;
+		}
+
+
+		/* Länken till den aktiva sidan. */
+		#subMenu li .active {
+			color: #0784cc;
+			border-bottom: 3px solid red;
+		}
+
+
+		#subMenu li a:hover {
+			color: #0784cc;
+			border-bottom: 3px solid red;
+		}

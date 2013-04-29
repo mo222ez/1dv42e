@@ -41,7 +41,9 @@ Route::get('/', array('as' => 'home', 'uses' => 'home@index'));
 
 /*----------ADMIN-----------*/
 
-Route::get('admin', array('as' => 'admin', 'before' => 'auth', 'uses' => 'admin@index'));
+Route::filter('pattern: admin*', 'auth');
+
+Route::get('admin', array('as' => 'admin', 'uses' => 'admin@index'));
 
 	/*----------ADMIN LOGIN-----------*/
 
@@ -55,37 +57,55 @@ Route::get('admin', array('as' => 'admin', 'before' => 'auth', 'uses' => 'admin@
 
 	/*----------ADMIN PRODUCTS-----------*/
 
-	Route::get('admin/products', array('as' => 'admin_products', 'before' => 'auth', 'uses' => 'admin@products'));
+	Route::get('admin/products', array('as' => 'admin_products', 'uses' => 'admin_product@index'));
+
+	Route::get('admin/products/new', array('as' => 'admin_new_product', 'uses' => 'admin_product@new' ));
+
+	Route::post('admin/products/new', array('as' => 'admin_create_product', 'uses' => 'admin_product@create' ));
 
 	/*----------END ADMIN PRODUCTS-------*/
 
 	/*----------ADMIN CATEGORIES-----------*/
 
-	Route::get('admin/categories', array('as' => 'admin_categories', 'before' => 'auth', 'uses' => 'admin@categories'));
+	Route::get('admin/categories', array('as' => 'admin_categories', 'uses' => 'admin_category@index'));
+
+	Route::get('admin/categories/new', array('as' => 'admin_new_category', 'uses' => 'admin_category@new'));
+
+	Route::post('admin/categories/new', array('as' => 'admin_create_category', 'uses' => 'admin_category@create'));
+
+	Route::get('admin/categories/(:num)/edit', array('as' => 'admin_edit_category', 'uses' => 'admin_category@edit'));
+
+	Route::post('admin/categories/(:num)/edit', array('as' => 'admin_edit_save_category', 'uses' => 'admin_category@edit_save'));
 
 	/*----------END ADMIN CATEGORIES-------*/
 
 	/*----------ADMIN ORDERS-----------*/
 
-	Route::get('admin/orders', array('as' => 'admin_orders', 'before' => 'auth', 'uses' => 'admin@orders'));
+	Route::get('admin/orders', array('as' => 'admin_orders', 'uses' => 'admin@orders'));
 
 	/*----------END ADMIN ORDERS-------*/
 
 	/*----------ADMIN CUSTOMERS-----------*/
 
-	Route::get('admin/customers', array('as' => 'admin_customers', 'before' => 'auth', 'uses' => 'admin@customers'));
+	Route::get('admin/customers', array('as' => 'admin_customers', 'uses' => 'admin@customers'));
 
 	/*----------END ADMIN CUSTOMERS-------*/
 
 	/*----------ADMIN STATISTICS-----------*/
 
-	Route::get('admin/statistics', array('as' => 'admin_statistics', 'before' => 'auth', 'uses' => 'admin@statistics'));
+	Route::get('admin/statistics', array('as' => 'admin_statistics', 'uses' => 'admin@statistics'));
 
 	/*----------END ADMIN STATISTICS-------*/
 
 	/*----------ADMIN SETTINGS-----------*/
 
-	Route::get('admin/settings', array('as' => 'admin_settings', 'before' => 'auth', 'uses' => 'admin@settings'));
+	Route::get('admin/settings', array('as' => 'admin_settings', 'uses' => 'admin_settings@index'));
+	Route::get('admin/settings/profile', array('as' => 'admin_profile_settings', 'uses' => 'admin_settings@profile'));
+	Route::get('admin/settings/payment_methods', array('as' => 'admin_payment_methods_settings', 'uses' => 'admin_settings@payment_methods'));
+	Route::get('admin/settings/shipping_methods', array('as' => 'admin_shipping_methods_settings', 'uses' => 'admin_settings@shipping_methods'));
+	Route::get('admin/settings/seo', array('as' => 'admin_seo_settings', 'uses' => 'admin_settings@seo'));
+	Route::get('admin/settings/tax', array('as' => 'admin_tax_settings', 'uses' => 'admin_settings@tax'));
+	Route::get('admin/settings/email', array('as' => 'admin_email_settings', 'uses' => 'admin_settings@email'));
 
 	/*----------END ADMIN SETTINGS-------*/
 

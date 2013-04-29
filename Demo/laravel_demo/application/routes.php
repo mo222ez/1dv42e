@@ -37,7 +37,7 @@ Route::get('/', function()
 	return View::make('home.index');
 });
 
-/*Route::get('/', array('as' => 'test', 'uses' => 'test@index'));*/
+Route::get('/', array('as' => 'test', 'uses' => 'test@index'));
 
 /*
 |--------------------------------------------------------------------------

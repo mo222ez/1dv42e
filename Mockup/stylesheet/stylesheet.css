@@ -27,18 +27,23 @@ h6	 		{ color: #2f3030; font-family: Helvetica, sans-serif; font-size: 14pt; lin
 
 p			{ color: #242424; font-family: serif; font-size: 12pt; line-height: 20pt;}
 
+span 		{ font-style: italic; color: red; }
+
 /* -------------------------------------------------------------------------------------------------- */
 
-
-
-
-
 button { }
+.helpText {
+	float: right;
+	border: 1px solid green;
+
+}
+
 
 #topContainer {
 	height: 30px;
 	width: 100%;
-	background-color: #dfd9d9;
+	background-image: url("../layout/topMenuBg.png");
+ 	background-repeat: repeat-x;
 
 }
 
@@ -59,26 +64,22 @@ button { }
 }
 
 header {
- background-image: url("../layout/header.png");
- background-repeat: no-repeat;
- background-position: center;
- width: auto;
- height: 65px;
- background-color: #7f7f7f;
- font-size: 35pt;
- padding-top: 15px;
- font-family: fantasy;
- text-align: center;
- border: 2px solid #000000;
+	//background-image: url("../layout/header.png");
+	//background-repeat: no-repeat;
+	//background-position: center;
+	width: auto;
+	height: 65px;
+	background-color: #dfd9d9;
+	font-size: 35pt;
+	padding-top: 15px;
+	font-family: helvetica, sans-serif;
+	padding-left: 100px;
+	text-align: left;
+	color: #0784cc;
+	border-top: 1px solid #545454;
 }
 
-#menuContainer {
-	min-height: 100px;
- 	width: auto;
- 	position: relative;
- 	background-color: #dfd9d9;
- 	overflow: hidden;
-}
+
 
 #wrapper {	
 	width: auto;
