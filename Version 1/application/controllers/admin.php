@@ -4,7 +4,26 @@ class Admin_Controller extends Base_Controller {
 
 	public function action_index()
 	{
-		return View::make('admin.index');
+		//$details = ProductDetail::where('value', '<', 10)->get();
+		/*$details = ProductDetail::with('product')->where(function ($query)
+						{
+							$query->where('detailtype_id', '=', DB::raw('3'));
+							$query->where('value', '<=', DB::raw('100'));
+						})->get();*/
+		//$details = DB::query('SELECT * FROM productdetails WHERE detailtype_id = 3 AND value <= 10');
+		
+		//$products = Product::get();
+		$products = Product::with('details')
+							->join('productdetails', 'products.id', '=', 'productdetails.product_id')
+							->where(function ($query)
+							{
+								$query->where('detailtype_id', '=', '3');
+								$query->where('value', '<=', DB::raw('10'));
+							})->get();
+		$context = array(
+			'products' => $products
+		);
+		return View::make('admin.index', $context);
 	}
 
 	public function action_login_get()

@@ -15,9 +15,21 @@
 	        Ingen startkostnad på butiken och du får en Google Adwords kampanjkod vid beställning.
 	        Skicka gärna e-post eller ring oss. Låt oss sköta det tekniska så du kan fokusera på att sälja!</p>
 	    </article>
-
 	    <article class="startPageEvent">
-	        <p>Du har <span>1st</span> oläst beställning.</p>
+	    	@if($products)
+	    	    <p>Du har lågt lagersaldo på dessa produkter:</p>
+	    	@else
+	    		<p>Inga produkter har lågt lagersaldo</p>
+	    	@endif
+
+	    	@forelse ($products as $product)
+	    	    <span>{{ $product->name }}</span>
+	    	    <br/>
+	    	@empty
+	    	    <!-- <p>Inga produkter</p> -->
+	    	@endforelse
+	        <!-- <p>Du har <span>1st</span> oläst beställning.</p> -->
+
 	    </article>
 
 	    <article class="startPageHelp">

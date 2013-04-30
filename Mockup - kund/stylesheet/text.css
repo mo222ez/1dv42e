@@ -1,0 +1,60 @@
+header h1	{ color: #2f3030; font-family: Helvetica, sans-serif; font-size: 28pt; margin: 10px 0px 10px 20px; }	
+h1	 	{ color: #2f3030; font-family: Helvetica, sans-serif; font-size: 28pt; line-height: 28pt; margin-bottom: 20px; }	
+h2		{ color: #2f3030; font-family: Helvetica, sans-serif; font-size: 24pt; line-height: 26pt; margin-bottom: 15px; margin-left: -10px; }	
+h3		{ color: #2f3030; font-family: Helvetica, sans-serif; font-size: 22pt; line-height: 24pt; margin-bottom: 10px; }
+h4	 	{ color: #2f3030; font-family: Helvetica, sans-serif; font-size: 20pt; line-height: 22pt; margin-bottom: 10px; }		
+h5	 	{ color: #2f3030; font-family: Helvetica, sans-serif; font-size: 18pt; line-height: 20pt; margin-bottom: 5px; }		
+h6	 	{ color: #2f3030; font-family: Helvetica, sans-serif; font-size: 14pt; line-height: 16pt; margin-bottom: 5px; margin-top: 20px; }		
+
+p		{ color: #242424; font-family: serif; font-size: 12pt; line-height: 20pt;}
+
+#goBackContainer p { color: #ffffff; }
+#sortContainer p { color: #ffffff;}
+#footerInfo1 p, #footerInfo2 p, #footerInfo3 p { color: #ffffff; letter-spacing: 3px;}
+
+
+span	{ font-style: italic; color: red; }
+.bold	{ font-weight: bold; }
+
+4bc4f1
+
+
+
+
+
+/*- Styling på produktens titel -*/
+h4.productTitle {
+	color: blue;
+	font-size: 12pt;
+	line-height: 14pt;
+	margin: 0px;
+	//border: 1px solid red;							
+}
+
+/*- Styling på produkttexten -*/
+p.productText {
+	font-size: 10pt;
+	line-height: 10pt;
+	margin: 0px;	
+	//border: 1px solid red;                    	
+}
+
+
+/*- Styling på produktens pris -*/
+	                    p.productPrice {
+	                    	font-size: 14pt;
+	                    	font-weight: bold;
+	                    	color: orange;
+	                    	float: right;
+	                    }
+
+
+	                    #cartContainer a#goToCart p {
+				margin: 0px;
+				padding: 6px 10px 0px 0px;
+				float: right;
+				color: #ffffff;
+				text-decoration: none;
+			}
+
+			#cartContainer a#goToCart:hover p { text-decoration: underline; }

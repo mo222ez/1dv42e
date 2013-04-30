@@ -25,7 +25,7 @@ class Seed_Productdetailtypes {
 	 */
 	public function down()
 	{
-		DB::query('TRUNCATE TABLE productdetailtypes');
+		//DB::query('TRUNCATE TABLE productdetailtypes');
 	}
 
 }

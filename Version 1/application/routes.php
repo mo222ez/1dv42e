@@ -63,6 +63,8 @@ Route::get('admin', array('as' => 'admin', 'uses' => 'admin@index'));
 
 	Route::post('admin/products/new', array('as' => 'admin_create_product', 'uses' => 'admin_product@create' ));
 
+	Route::delete('admin/products/(:num)', array('as' => 'admin_delete_product', 'uses' => 'admin_product@delete'));
+
 	/*----------END ADMIN PRODUCTS-------*/
 
 	/*----------ADMIN CATEGORIES-----------*/
@@ -76,6 +78,8 @@ Route::get('admin', array('as' => 'admin', 'uses' => 'admin@index'));
 	Route::get('admin/categories/(:num)/edit', array('as' => 'admin_edit_category', 'uses' => 'admin_category@edit'));
 
 	Route::post('admin/categories/(:num)/edit', array('as' => 'admin_edit_save_category', 'uses' => 'admin_category@edit_save'));
+
+	Route::delete('admin/categories/(:num)', array('as' => 'admin_delete_category', 'uses' => 'admin_category@delete'));
 
 	/*----------END ADMIN CATEGORIES-------*/
 

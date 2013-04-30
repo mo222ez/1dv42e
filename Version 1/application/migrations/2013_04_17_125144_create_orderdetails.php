@@ -12,9 +12,12 @@ class Create_Orderdetails {
 		Schema::create('orderdetails', function($table){
 			$table->increments('id');
 			$table->string('value');
-			$table->integer('order_id');
-			$table->integer('detailtype_id');
+			$table->integer('order_id')->unsigned();
+			$table->integer('detailtype_id')->unsigned();
 			$table->timestamps();
+
+			$table->foreign('order_id')->references('id')->on('orders');
+			$table->foreign('detailtype_id')->references('id')->on('orderdetailtypes');
 		});
 	}
 

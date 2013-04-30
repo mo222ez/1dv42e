@@ -18,47 +18,64 @@
 	        
 	        <h3>Tillgängliga produkter</h3>
 	        
-	        <div class="debug">
+	        @if($products)
+        	    <table id="tableProducts">
+		        	<thead>
+		                <tr>
+		                    <th>Art.nr:</th>
+		                    <th>Namn:</th>
+		                    <th>Kategori:</th>
+		                    <th>{{ $types[1]->name }}</th>
+		                    
+		                    <th>{{ $types[4]->name }}</th>
+		                    <th>{{ $types[3]->name }}</th>
 
-	        	{{ var_dump($products[0]->details()->where('detailtype_id', '=', '5')->get()) }}
-	        </div>
-	        <table id="tableProducts">
-	        	<thead>
-	                <tr>
-	                    <th>Art.nr:</th>
-	                    <th>Namn:</th>
-	                    <th>Kategori:</th>
-	                    <th>Pris:</th>
-	                    
-	                    <th>Vikt:</th>
-	                    <th>Lager:</th>
+		                    <th>{{ $types[5]->name }}</th>
+		                    <th>Edit:</th>
+		                    <th>Inställning:</th>
+		                    <th>Ta bort</th>
+		                </tr>
+		            </thead>
+		            <tbody>
+		                @forelse ($products as $product)
+		                	<tr>
+		                		<td>{{ $product->articlenr }}</td>
+			                    <td>{{ $product->name }}</td>
+			                    <td>{{ $product->category->name }}</td>
+			                    <td>{{ $sorted_details[$product->id][1]->value }} kr</td>
+			                    <td>{{ $sorted_details[$product->id][4]->value }} kg</td>
+			                    <td>{{ $sorted_details[$product->id][3]->value }} st</td>
+			                    <td>{{ $sorted_details[$product->id][5]->value }} %</td>
+			                    <td>
+			                    	<a href="#.html">
+			                    		{{ HTML::image('layout/edit.ico', 'editIcon', array('class' => 'tableIcon')) }}
+			                    	</a>
+			                    </td>
+			                    <td>
+			                    	<a href="#.html">
+			                    		{{ HTML::image('layout/settings.ico', 'settingsIcon', array('class' => 'tableIcon')) }}
+			                    	</a>
+			                    </td>
 
-	                    <th>Moms:</th>
-	                    <th>Edit:</th>
-	                    <th>Inställning:</th>
-	                </tr>
-	            </thead>
-	            <tbody>
-	                @forelse ($products as $product)
-	                    
-	                    <td> kr</td>                                
-	                    <td>0.05 kg</td>
-	                    <td>10 st</td>                                
-	                    <td>25 %</td>
-	                    <td><a href="#.html"><img class="tableIcon" src="layout/edit.ico" alt="editIcon"/></a></td>
-	                    <td><a href="#.html"><img class="tableIcon" src="layout/settings.ico" alt="settingsIcon"/></a></td>
-	                @empty
-	                    <h4>
-	                    	{{ HTML::link_to_route('admin_new_product', "Inga produkter, lägg till några!") }}
-	                    </h4>
-	                @endforelse
-	                <tr>
-	                    
-	                </tr>
+			                    <td>
+			                    	{{ Form::open(URL::to_route('admin_delete_product', $product->id), 'DELETE') }}
+		                        		{{ Form::submit('Radera', array('class' => 'btn btn-alert btn-M')) }}
+		                        	{{ Form::close() }}
+			                    </td>
+		                    </tr>
+		                @empty
+		                    <h4>
+		                    	{{ HTML::link_to_route('admin_new_product', "Inga produkter, lägg till några!") }}
+		                    </h4>
+		                @endforelse
 
-	            </tbody>
-	        </table>
-
+		            </tbody>
+		        </table>
+		    @else
+		    	<h4>
+                	{{ HTML::link_to_route('admin_new_product', "Inga produkter, lägg till några!") }}
+                </h4>
+        	@endif
 
 	    </article> 
     </section>   

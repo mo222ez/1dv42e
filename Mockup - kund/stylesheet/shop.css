@@ -1,0 +1,404 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ---------- RESET CSS ----------------------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {	margin: 0;	padding: 0;	border: 0;	font-size: 100%;	font: inherit;	vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {	display: block;}
+body {	line-height: 1;}
+ol, ul {	list-style: none;}
+blockquote, q {	quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {	content: '';	content: none;}
+table {	border-collapse: collapse;	border-spacing: 0;}
+
+
+
+/* -------------------------------------------------------------------------------------------------- */
+
+body { 
+	background-image: url("../layout/1.jpg"); 
+	background-repeat: repeat; 
+	//background-color: #76c3cb;
+}
+
+header h1	{ color: #2f3030; font-family: Helvetica, sans-serif; font-size: 28pt; margin: 10px 0px 10px 20px; }	
+h1	 	{ color: #2f3030; font-family: Helvetica, sans-serif; font-size: 28pt; line-height: 28pt; margin-bottom: 20px; }	
+h2		{ color: #2f3030; font-family: Helvetica, sans-serif; font-size: 24pt; line-height: 26pt; margin-bottom: 15px; margin-left: -10px; }	
+h3		{ color: #2f3030; font-family: Helvetica, sans-serif; font-size: 22pt; line-height: 24pt; margin-bottom: 10px; }
+h4	 	{ color: #2f3030; font-family: Helvetica, sans-serif; font-size: 20pt; line-height: 22pt; margin-bottom: 10px; }		
+h5	 	{ color: #2f3030; font-family: Helvetica, sans-serif; font-size: 18pt; line-height: 20pt; margin-bottom: 5px; }		
+h6	 	{ color: #2f3030; font-family: Helvetica, sans-serif; font-size: 14pt; line-height: 16pt; margin-bottom: 5px; margin-top: 20px; }		
+
+p		{ color: #242424; font-family: serif; font-size: 12pt; line-height: 20pt;}
+
+#goBackContainer p { color: #ffffff; }
+#sortContainer p { color: #ffffff;}
+#footerInfo1 p, #footerInfo2 p, #footerInfo3 p { color: #ffffff; letter-spacing: 3px;}
+
+
+span	{ font-style: italic; color: red; }
+.bold	{ font-weight: bold; }
+
+/* -------------------------------------------------------------------------------------------------- */
+#topWrapper {
+	background-color: #222222;
+	width: 100%; 
+	height: 50px;  
+	position: fixed;
+	top: 0px;  	
+	z-index: 100;
+	box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+}
+	
+	#topBar {
+		width: 1000px;
+		height: 50px;
+		overflow: hidden;
+		margin: 0px auto 0px auto;
+	}
+
+		#searchContainer {
+			color: #ffffff;
+			padding: 16px;
+			float: left;
+		}
+
+		#cartContainer {
+			height: 50px;
+			color: #ffffff;
+			float: right;
+			margin: 0px;
+			padding: 5px 10px 0px 10px;
+		}
+			#cartContainer a#goToCart img {
+				margin: 0px;
+				padding: 0px;
+				float: right;
+			}
+
+			#cartContainer a#goToCart p {
+				margin: 0px;
+				padding: 6px 10px 0px 0px;
+				float: right;
+				color: #ffffff;
+				text-decoration: none;
+			}
+
+			#cartContainer a#goToCart:hover p { text-decoration: underline; }
+
+/* ------------------------------------------ */
+.clearBottomContainers {
+	clear: both;
+}
+
+/* ------------------------------------------ */	
+#mainWrapper {
+	background-color: #f7f7f7;
+	width: 1000px;
+	overflow: hidden;
+	position: relative;
+	top: 50px;
+	margin: 0px auto 0px auto;
+	box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.5);
+}
+
+	
+
+	/* ------------------------------------------ */
+	/* ---BUTIKENS NAMN OCH ALLMÄN INFORMATION--- */
+	/* ------------------------------------------ */
+	#headerBar {
+		background-color: #eeeeee;
+		height: 120px;
+		width: 1000px; 
+		padding: 20px 0px 0px 0px;
+		border-bottom: 1px solid #cccccc;
+	}
+
+		header {
+			//background-color: #;
+			height: 100%;
+			width: 390px;
+			padding-right: 10px;
+			float: left;			 			
+		}
+
+		#headerInfo1 {
+			//background-color: #;
+			height: 100%;
+			width: 300px;
+			float: right;
+		}
+
+		#headerInfo2 {
+			//background-color: #;
+			height: 100%;
+			width: 300px;
+			float: right;
+		}
+
+	/* ------------------------------------------ */
+	/* ---------------- ---------------- */
+	/* ------------------------------------------ */
+	#menuAndSectionContainer {
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+	}
+
+	/* ------------------------------------------ */
+	/* ----------------HUVUDMENYN---------------- */
+	/* ------------------------------------------ */
+	nav#mainMenu {
+		background-color: #eeeeee;
+		min-height: 100%;
+		width: 200px;
+		float: left;
+		display: block;		
+		position: absolute;
+		left: 0px;	
+		overflow: hidden; 		
+		list-style: none;
+	}	
+
+	nav#mainMenu li {
+		width: auto;
+		height: auto;
+		padding: 0px;
+		float: left;
+		text-align: center;	
+	}
+
+		nav#mainMenu li a {
+			width: 200px;
+			height: 15px;
+			display: block;
+			padding: 10px 0px 10px 0px;
+
+			/* Texten till länkarna i huvudmenyn */
+			color: #888888;
+			font-size: 11pt;
+			font-family: Helvetica, sans-serif;
+			letter-spacing: 1px;
+			text-align: center;
+			text-decoration: none;
+			border-bottom: 1px solid #cccccc;			
+		}
+
+		//nav#mainMenu li:first-child { border-top: 1px solid #cccccc; }
+
+		/* Länken till den aktiva sidan. */
+		nav#mainMenu li .active {
+			background-color: #333333;
+			color: #4bc4f1;
+		}
+
+		/* När användaren klickar på en länk så byter den färg. */
+		nav#mainMenu li a:active {
+			color: #20aae2; /* Ljus blå */
+			text-decoration: underline;
+		}
+
+		/* När användaren för muspekaren över länken. */
+		nav#mainMenu li a:hover {
+			background-color: #333333;
+			color: #4bc4f1; /* Ljus ljus blå */		
+		}
+
+	/* ------------------------------------------ */
+	/* ------HUVUDFÖNSTER MED ALLT INNEHÅLL------ */
+	/* ------------------------------------------ */
+	section {
+		background-color: #f7f7f7;
+		width: 760px; 
+		overflow: hidden;
+		float: right;
+		padding: 10px 20px 20px 20px;
+	}
+
+		#sortBar {
+			background-color: #333333;
+			height: 25px ;
+			width: 720px;
+			padding: 5px 20px 5px 20px;
+			border-radius: 10px;
+			margin-bottom: 20px;
+		}
+
+			#goBackContainer {
+				float: left;				
+			}
+
+			#sortContainer {
+				float: right;
+			}
+
+		#firstPageNews {
+			height: 300px;
+			width: 758px;
+			background-image: url("../layout/imgNews2.jpg");
+			background-repeat: no-repeat;
+			margin-bottom: 20px;
+
+
+		}
+
+		/* ------------------------------------------ */
+		/* -----------PRODUKTVISNING ALLA------------ */
+		/* ------------------------------------------ */
+		/*- Hela listan -*/
+		section ol.productList {			
+			width: 758px; 
+			list-style: none;
+			overflow: hidden;
+			margin: 0px auto 0px auto;			
+		}
+			/*- Styling på listelementet -*/
+			section .productList li {
+				background-color: #ffffff;
+				width: 152px;
+				height: 200px;
+				padding: 18px 18px 18px 18px;				
+				margin: 0 -1px -1px 0;
+				float: left;				
+				position: relative;				
+				z-index: 1;
+				border: 1px solid #e5e5e5;
+			}
+			
+			/*-  -*/
+			section .productList:last-child { border-bottom: 1px solid #e5e5e5;}
+
+				/*- Styling på boxen runt en visning av en produkt -*/
+				section ol.productList li article {	
+					height: 200px;
+					width: 152px;
+					//border: 1px solid red;
+				}
+					
+					/*- Styling på produktbilden -*/
+					section ol.productList li article a img {
+						height: 120px;
+						width: 152px;
+						margin: 0px;
+						//border: 1px solid blue;
+					}
+					
+					/*- Styling på boxen runt produktens beskrivning -*/
+					.productDescription {
+						height: 52px;
+						width: 152px;
+						clear: both;
+						//border: 1px solid green;						
+					}
+						
+						/*- Styling på produktens titel -*/
+						h4.productTitle {
+							color: blue;
+							font-size: 12pt;
+							line-height: 14pt;
+							margin: 0px;
+							//border: 1px solid red;							
+						}
+
+						/*- Styling på produkttexten -*/
+	                    p.productText {
+	                    	font-size: 10pt;
+	                    	line-height: 10pt;
+	                    	margin: 0px;	
+	                    	//border: 1px solid red;                    	
+	                    }
+
+
+                    .productBuyAndPrice {
+                    	height: 28px;
+						width: 152px;
+						//border: 1px solid red;
+                    }
+
+	                    /*- Styling på produktens pris -*/
+	                    p.productPrice {
+	                    	font-size: 14pt;
+	                    	font-weight: bold;
+	                    	color: orange;
+	                    	float: right;
+	                    }
+	                    
+	                    /*- Styling på "Köp"-knappen -*/
+	                    a.productBuyButton {
+							padding: 4px 20px 4px 20px;
+							position: relative;
+							margin: 0px auto 0px auto;
+							top: 5px;
+							font-size: 13pt;
+							text-decoration: none;
+							//border: 10px solid red;
+						}
+
+
+	/* ------------------------------------------ */
+	/* ------------------FOOTER------------------ */
+	/* ------------------------------------------ */
+	footer {
+		background-color: #333333;
+		height: 260px;
+		width: 960px;
+		padding: 20px;
+		clear: both;
+	}
+		#footerInfo1 {
+			height: 80px;
+			width: 280px;
+			padding: 10px;
+			float: right;
+		}
+
+		#footerInfo2 {
+			height: 80px;
+			width: 280px;
+			padding: 10px;
+			float: right;
+		}
+
+		#footerInfo3 {
+			height: 80px;
+			width: 280px;
+			padding: 10px;
+			float: right;
+		}
+		
+
+/* ------------------------------------------ */
+/* -----------------KNAPPAR------------------ */
+/* ------------------------------------------ */
+.btn {
+	background-repeat: repeat-x;
+	background-size: auto 150%;
+	background-position: center;
+	border-radius: 5px;
+	opacity: 1;
+	color: #ffffff;
+}
+
+.btn-XS	{ min-height: 20px; width: 70px; font-size: 8pt; padding: 3px; border-radius: 4px;}
+.btn-S 	{ min-height: 20px; width: 100px; font-size: 8pt; padding: 5px;}
+.btn-M 	{ min-height: 25px; width: 150px; font-size: 10pt; padding: 7px;}
+.btn-L 	{ min-height: 25px; width: 200px; font-size: 11pt; padding: 10px;}
+.btn-XL { min-height: 25px; width: 300px; font-size: 11pt; padding: 10px;}
+
+.btn-primary 	{ background-image: url("../layout/blueBox.png");}
+.btn-success 	{ background-image: url("../layout/greenBox.png");}
+.btn-warning 	{ background-image: url("../layout/orangeBox.png"); color: #000000; }
+.btn-alert 		{ background-image: url("../layout/redBox.png");}
+
+.btn:hover { background-size: auto 100%; text-decoration: underline; }
+
+.btn:active {
+	background-size: auto 150%;
+	box-shadow:inset 0px 5px 25px 1px rgba(0, 0, 0, 0.5);
+}
+
+
+

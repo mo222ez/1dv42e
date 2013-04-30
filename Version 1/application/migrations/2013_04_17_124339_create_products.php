@@ -14,8 +14,10 @@ class Create_Products {
 			$table->string('name');
 			$table->text('description');
 			$table->string('articlenr');
-			$table->integer('category_id');
+			$table->integer('category_id')->unsigned();
 			$table->timestamps();
+
+			$table->foreign('category_id')->references('id')->on('categories')->on_delete('restrict');
 		});
 	}
 

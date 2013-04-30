@@ -1,0 +1,78 @@
+
+/* ------------------------------------------ */
+/* -----------PRODUKTVISNING ALLA------------ */
+/* ------------------------------------------ */
+
+/*- Hela listan -*/
+#singleProduct {			
+	width: 758px; 
+	list-style: none;
+	overflow: hidden;
+	margin: 0px auto 0px auto;			
+}
+	#singleProductImage img {
+		height: 500px;
+		width: 350px;
+		margin: 0px;
+		float: left;
+		border: 1px solid #cccccc;
+	}
+	
+	/*- Styling på boxen runt produktens beskrivning -*/
+	#singleProductDescription {
+		height: 500px;
+		width: 380px;
+		float: right;
+		padding: 0px 10px 0px 10px;		
+		//border: 1px solid black;						
+	}
+
+		#singleProductAllText {}
+			
+			/*- Styling på produktens titel -*/
+			h4.singleProductTitle {
+				color: blue;
+				font-size: 20pt;
+				line-height: 22pt;
+				margin: 0px;							
+			}
+
+			/*- Styling på produkttexten -*/
+	        p.singleProductText {
+	        	font-size: 12pt;
+	        	line-height: 14pt;
+	        	margin: 10px 0px 10px 0px;                   	
+	        }
+
+	        /*- Styling på produktens pris -*/
+	        p.singleProductPrice {
+	        	height: 30px;
+	        	width: 100%;
+	        	text-align: right;
+	        	font-size: 16pt;
+	        	line-height: 20pt;
+	        	font-weight: bold;
+	        	color: orange;
+	        }
+
+
+	        #buyButton {
+	        	height: 40px;
+				width: 100%;
+				overflow: hidden;
+				margin-top: 30px;
+				//border: 1px solid red;
+				clear: both;
+	        }                
+                
+	            /*- Styling på "Köp"-knappen -*/
+	           	#buyButton a.buyButton {
+					height: 40px;
+					width: 100%;
+					padding: 8px 128px 8px 128px;
+					position: relative;
+					//margin: 0px auto 0px auto;
+					top: 10px;
+					font-size: 13pt;
+					text-decoration: none;
+				}

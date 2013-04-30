@@ -16,7 +16,7 @@
 	<section>
 		<article>
 			<h1>Lägg till en ny kategori</h1>
-			{{ Form::open() }}
+			{{ Form::open(URL::to_route('admin_create_category'),'POST', array('class' => 'styleForm')) }}
 				{{ Form::token() }}
 				<!-- name field -->
 		        <div class="inputWrapper">

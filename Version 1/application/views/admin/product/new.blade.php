@@ -15,7 +15,7 @@
 @section('main_content')
 	<section>
 		<article>
-			{{ Form::open() }}
+			{{ Form::open(URL::to_route('admin_create_product'), 'POST', array('class' => 'styleForm')) }}
 		    	{{ Form::token() }}
 		    	<h2>Produkt</h2>
 		        <!-- name field -->

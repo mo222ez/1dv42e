@@ -45,4 +45,16 @@ class Admin_Category_Controller extends Base_Controller {
 		return Redirect::to_route('admin_categories');
 	}
 
+	public function action_delete($category_id)
+	{
+		$category = Category::find($category_id);
+		try {
+			$category->delete();
+			return Redirect::to_route('admin_categories');
+		} catch (Exception $e) {
+			$text = var_dump($e);
+			return "ss";
+		}	
+	}
+
 }

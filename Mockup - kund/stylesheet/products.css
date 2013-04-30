@@ -1,0 +1,65 @@
+/* ------------------------------------------ */
+		/* -----------PRODUKTVISNING ALLA------------ */
+		/* ------------------------------------------ */
+		/*- Hela listan -*/
+		section ol.productList {			
+			width: 758px; 
+			list-style: none;
+			overflow: hidden;
+			margin: 0px auto 0px auto;			
+		}
+			/*- Styling på listelementet -*/
+			section .productList li {
+				background-color: #ffffff;
+				width: 152px;
+				height: 200px;
+				padding: 18px 18px 18px 18px;				
+				margin: 0 -1px -1px 0;
+				float: left;				
+				position: relative;				
+				z-index: 1;
+				border: 1px solid #e5e5e5;
+			}
+			
+			/*-  -*/
+			section .productList:last-child { border-bottom: 1px solid #e5e5e5;}
+
+				/*- Styling på boxen runt en visning av en produkt -*/
+				section ol.productList li article {	
+					height: 200px;
+					width: 152px;
+					//border: 1px solid red;
+				}
+					
+					/*- Styling på produktbilden -*/
+					section ol.productList li article a img {
+						height: 120px;
+						width: 152px;
+						margin: 0px;
+						//border: 1px solid blue;
+					}
+					
+					/*- Styling på boxen runt produktens beskrivning -*/
+					.productDescription {
+						height: 52px;
+						width: 152px;
+						clear: both;
+						//border: 1px solid green;						
+					}
+					
+                    .productBuyAndPrice {
+                    	height: 28px;
+						width: 152px;
+						//border: 1px solid red;
+                    }                    
+	                    
+	                    /*- Styling på "Köp"-knappen -*/
+	                    a.productBuyButton {
+							padding: 4px 20px 4px 20px;
+							position: relative;
+							margin: 0px auto 0px auto;
+							top: 5px;
+							font-size: 13pt;
+							text-decoration: none;
+							//border: 10px solid red;
+						}
