@@ -39,10 +39,6 @@
 	                        	{{ Form::open(URL::to_route('admin_delete_category', $category->id), 'DELETE') }}
 	                        		{{ Form::submit('Radera', array('class' => 'btn btn-alert btn-M')) }}
 	                        	{{ Form::close() }}
-	                        	<!-- <a href="">
-	                        		{{ HTML::image('layout/settings.ico', 'settingsIcon', array('class' => 'tableIcon')) }}
-
-	                        	</a> -->
 	                        </td>
 	                    </tr>
                 	@empty

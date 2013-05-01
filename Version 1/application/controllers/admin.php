@@ -4,22 +4,6 @@ class Admin_Controller extends Base_Controller {
 
 	public function action_index()
 	{
-		//$details = ProductDetail::where('value', '<', 10)->get();
-		/*$details = ProductDetail::with('product')->where(function ($query)
-						{
-							$query->where('detailtype_id', '=', DB::raw('3'));
-							$query->where('value', '<=', DB::raw('100'));
-						})->get();*/
-		//$details = DB::query('SELECT * FROM productdetails WHERE detailtype_id = 3 AND value <= 10');
-		
-		//$products = Product::get();
-		/*$products = Product::with('details')
-							->join('productdetails', 'products.id', '=', 'productdetails.product_id')
-							->where(function ($query)
-							{
-								$query->where('detailtype_id', '=', '3');
-								$query->where('value', '<=', DB::raw('10'));
-							})->get();*/
 		$stocks = Stock::with('product')->where('value', '<=', DB::raw('10'))->get();
 		
 		$context = array(
@@ -57,16 +41,6 @@ class Admin_Controller extends Base_Controller {
 		return Redirect::to_route('home');
 	}
 
-	/*public function action_products()
-	{
-		return View::make('admin.product.index');
-	}*/
-
-	/*public function action_categories()
-	{
-		return View::make('admin.category.index');
-	}*/
-
 	public function action_orders()
 	{
 		return View::make('admin.order.index');
@@ -81,10 +55,5 @@ class Admin_Controller extends Base_Controller {
 	{
 		return View::make('admin.statistic.index');
 	}
-
-	/*public function action_settings()
-	{
-		return View::make('admin.settings.index');
-	}*/
 
 }

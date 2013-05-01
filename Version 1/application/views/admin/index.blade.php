@@ -18,15 +18,13 @@
 	    <article class="startPageEvent">
 	    	@if($stocks)
 	    	    <p>Du har lågt lagersaldo på dessa produkter:</p>
-	    	@else
-	    		<p>Inga produkter har lågt lagersaldo</p>
 	    	@endif
 
 	    	@forelse ($stocks as $stock)
 	    	    <span>{{ $stock->product->name }} - {{ $stock->value }} st i lager</span>
 	    	    <br/>
 	    	@empty
-	    	    <!-- <p>Inga produkter</p> -->
+	    	    <p>Inga produkter har lågt lagersaldo</p>
 	    	@endforelse
 	        <!-- <p>Du har <span>1st</span> oläst beställning.</p> -->
 
