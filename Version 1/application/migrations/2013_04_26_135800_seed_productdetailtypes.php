@@ -12,9 +12,9 @@ class Seed_Productdetailtypes {
 		DB::table('productdetailtypes')->insert(array(
 			array('name' => 'Pris (exkl. moms)'),
 			array('name' => 'Inköpspris (enkl. moms)'),
-			array('name' => 'Lager'),
-			array('name' => 'Vikt'),
-			array('name' => 'Moms')
+			//array('name' => 'Lager'),
+			array('name' => 'Vikt')
+			//array('name' => 'Moms')
 		));
 	}
 

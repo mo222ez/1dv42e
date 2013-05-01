@@ -27,10 +27,10 @@
 		                    <th>Kategori:</th>
 		                    <th>{{ $types[1]->name }}</th>
 		                    
-		                    <th>{{ $types[4]->name }}</th>
 		                    <th>{{ $types[3]->name }}</th>
+		                    <th>Lager</th>
 
-		                    <th>{{ $types[5]->name }}</th>
+		                    <th>Moms</th>
 		                    <th>Edit:</th>
 		                    <th>Inställning:</th>
 		                    <th>Ta bort</th>
@@ -43,9 +43,9 @@
 			                    <td>{{ $product->name }}</td>
 			                    <td>{{ $product->category->name }}</td>
 			                    <td>{{ $sorted_details[$product->id][1]->value }} kr</td>
-			                    <td>{{ $sorted_details[$product->id][4]->value }} kg</td>
-			                    <td>{{ $sorted_details[$product->id][3]->value }} st</td>
-			                    <td>{{ $sorted_details[$product->id][5]->value }} %</td>
+			                    <td>{{ $sorted_details[$product->id][3]->value }} kg</td>
+			                    <td>{{ $product->stock->value }} st</td>
+			                    <td>{{ $product->tax->value }} %</td>
 			                    <td>
 			                    	<a href="#.html">
 			                    		{{ HTML::image('layout/edit.ico', 'editIcon', array('class' => 'tableIcon')) }}

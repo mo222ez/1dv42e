@@ -21,6 +21,8 @@
                 </div>
                 
                 <div id="cartContainer">
+                    <p>Du har <span>1</span> produkter i den kundvagn, summa 
+                        <span> 298,00 kr</span></p>
                     <a href="#" id="goToCart">
                         <img src="layout/cart.png"/>
                         <p>Visa kundvagn</p>
@@ -39,27 +41,33 @@
                 </header>
 
                 <div id="headerInfo2">
-                    <p class="bold">Informationsfält</p>
-                    <p>Om oss</p>
-                    <p>Frågor och Svar</p>
+                    <ol class="headerList">
+                        <li><a href="#">Kundtjänst</a></li>
+                        <li><a href="#">Köpvvilkor</a></li>
+                        <li><a href="#">Om Oss</a></li>
+                        <li><a href="#">Frågor och Svar</a></li>
+                    </ol>                    
                 </div>
 
                 <div id="headerInfo1">
-                    <p class="bold">Informationsfält</p>
-                    <p>Kundservice</p>
-                    <p>Köpvillkor</p>
+                    <ol class="headerList">
+                        <li>Fast frakt 49:-</li>
+                        <li>Blixtsnabb leverans</li>
+                        <li>90 dagars öppet köp</li>
+                        <li>2års garanti</li>
+                    </ol>
                 </div>                
             </div>
             
             <div id="menuAndSectionContainer">
                 <nav id="mainMenu">
-                    <ol>
+                    <ul>
                         <li><a href="startShop.html" class="active">Miley Cyrus</a></li>
                         <li><a href="startShop.html">Photoshoot</a></li>
                         <li><a href="startShop.html">Musik</a></li>
                         <li><a href="startShop.html">Böcker</a></li>
                         <li><a href="startShop.html">Filmer</a></li>
-                    </ol>
+                    </ul>
                 </nav>
 
                 <section>
@@ -73,58 +81,111 @@
                     </div>
                     
 
-
-
                     <div id="singleProduct">
 
                         <div id="singleProductImage">
-                            <img src="layout/singleImgTest.jpg" alt="Test"/>
-                        </div>
-
-                        <div id="singleProductDescription">
-                            <div id="singleProductAllText">
-                            
-                                <h4 class="singleProductTitle">Miley Cyrus</h4>
-                                <p class="singleProductText">
-                                    Miley Cyrus is the daughter of country singer Billy Ray Cyrus and his wife Tish. She has 5 siblings - two half-brothers, a half-sister and a younger brother and sister. Her birth name is Destiny Hope, given to her by her parents who hoped she would achieve greatness. Her childhood nickname was Smiley, as she had a cheerful disposition which was eventually shortened to Miley.
-                                </p>
-                                <p class="singleProductText">
-                                    Cyrus was initially educated at Heritage Elementary School in Tennessee. When she turned eight, her family moved to Toronto, Canada where Cyrus' father Billy Ray took a role in the TV series "Doc" (2001). It was around this time that Cyrus decided she wanted to act too. Her first role came alongside her father in "Doc" (2001). She also scored a small role in Tim Burton's Big Fish (2003).
-                                </p>
-
-                                <p class="singleProductPrice">590 kr</p>
-                            </div>  
-
-                            <div id="buyButton">
-                                <a href="#" class="buyButton btn btn-success">Lägg i kundvagnen</a>
+                            <a href="#" class="bigImage" ><img src="layout/singleImgTest.jpg" alt="Test"/></a>
+                            <div id="singleProductImageThumb">
+                                <a href="#" class="thumbNails" ><img src="layout/thumbTest1.jpg" alt="Test"/></a>
+                                <a href="#" class="thumbNails" ><img src="layout/thumbTest2.jpg" alt="Test"/></a>
+                                <a href="#" class="thumbNails" ><img src="layout/thumbTest3.jpg" alt="Test"/></a>
+                                <a href="#" class="thumbNails" ><img src="layout/thumbTest4.jpg" alt="Test"/></a>
+                                <a href="#" class="thumbNails" ><img src="layout/thumbTest5.jpg" alt="Test"/></a>
+                                <a href="#" class="thumbNails" ><img src="layout/thumbTest6.jpg" alt="Test"/></a>
                             </div>
                         </div>
-                       
-                         
 
+
+                        <div id="singleProductDescription">
+                            <h4 class="singleProductTitle">Miley Cyrus</h4>
+                            <p class="singleProductPrice">590 kr</p>
+
+                            <div id="buyOptions">
+                                <table>
+                                    <form>          
+                                        <tr>
+                                            <td><strong>Antal</strong></td>  
+                                            <!--<td class="order_spacing"><strong>Alternativ</strong></td><td width="100%"></td>-->
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="text" size="2" value="1" >
+                                            </td>
+                                            <!--<td>
+                                                <select name="pid" id="pid" >
+                                                    <option value="21683" >Small - 179kr</option>
+                                                    <option value="21687" >XXL - 179kr</option>
+                                                    <option value="21686" >XL - 179kr</option>
+                                                    <option value="21684" >Medium - 179kr</option>
+                                                    <option value="21685" >Large - 179kr</option>
+                                                </select>
+                                            </td>-->
+                                            <td>
+                                                <input type="hidden" value=""/>
+                                                <input name="submit" type="submit" value="Lägg i kundvagnen"  class="btn btn-success btn-M"><br />
+                                            </td>
+                                        </tr>
+                                    </form>                
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <p class="singleProductStockInfo"><span>Finns i lager</span></p>
+                                            <p class="singleProductShipmentInfo">Leveranstid: <span>1-3 dagar</span></p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+
+
+                            <!--<div id="buyButton">
+                                <a href="#" class="buyButton btn btn-success">Lägg i kundvagnen</a>
+                            </div>-->
+
+                            <div id="singleProductAllText"> 
+                                <!--<h2>Om produkten</h2>-->
+                                <p class="singleProductText">
+                                    Miley Cyrus är dotter till countrysångaren Billy Ray Cyrus och hans fru Tish. Hon har fem syskon - två halvbröder, en halvsyster och en yngre bror och syster. Hennes födelse namn är Destiny Hope, som hon fick av sina föräldrar som hoppades att hon skulle uppnå storhet. Hennes barndom smeknamn var Smiley, eftersom hon hade en gladlynt som så småningom förkortades till Miley.
+                                </p>
+                                <p class="singleProductText">
+                                    Cyrus var ursprungligen utbildad på Heritage Elementary School i Tennessee. När hon fyllde åtta, flyttade hennes familj till Toronto, Kanada där Cyrus pappa Billy Ray tog en roll i tv-serien "Doc" (2001). Det var runt denna tid som Cyrus bestämde hon ville handla för. Hennes första roll kom tillsammans med sin far i "Doc" (2001). Hon gjorde också en liten roll i Tim Burtons Big Fish (2003).
+                                </p>
+
+                                <p class="singleProductText">
+                                    År 2005 blev Cyrus rollen som ledningen i Disney-serien "Hannah Montana" (2006), om en tonåring som leder ett dubbelliv som en popstjärna. Återigen hennes far agerade tillsammans med hennes. Showen var en smash och rekord hit, sell-out turnéer och erbjudanden merchandising följde snart. Cyrus blev en tonåring superstjärna. Efter framgångarna med "Hannah Montana" (2006), gjorde Cyrus flytten till andra roller - inklusive spela Ronnie Miller i The Last Song (2010) och Lola i LOL (2012) tillsammans med Demi Moore.    
+                                </p>
+                            </div> 
+                        </div><!-- END singleProductDescription -->
                     </div>
-
-
-
-
+                    <div id="singleProductInformation">
+                        <h3>Titel från databasen</h3>
+                        <p>Text från databasen</p>
+                    </div>
                 </section>
             </div>
             
             <footer>
                 <div id="footerInfo3">
-                    <p class="bold">FOOTERINFO 3</p>
-                    <p>Exempel</p>
-                    <p>Exempel</p>
+                    <h3 class="footerInfo">Trygg E-handel</h3>
+                    <p>Vi är certifierade av Trygg E-handel och följer deras riktlinjer och krav.</p>
+                    <img src="layout/safeShopping.png"/>
                 </div>
 
                 <div id="footerInfo2">
-                    <p class="bold">FOOTERINFO 2</p>
-                    <p>Matnyttig information som inte behöver visas högst upp. Vilka banker som stödjs, betalningsalternativ osv</p>
+                    <h3 class="footerInfo">Anna bra information</h3>
+                    <ol class="footerList">
+                        <li>Exempel</li>
+                        <li>Exempel</li>
+                        <li>Exempel</li>
+                        <li>Exempel</li>
+                        <li>Exempel</li>
+                    </ol>
                 </div>
 
                 <div id="footerInfo1">
-                    <p class="bold">FOOTERINFO 1</p>
-                    <p>Matnyttig information som inte behöver visas högst upp. Vilka banker som stödjs, betalningsalternativ osv.</p>
+                    <h3 class="footerInfo">Betala tryggt och säkert</h3>
+                    <img src="layout/betalTest.png"/>
                 </div>
             </footer>
         </div> <!-- END WRAPPER -->

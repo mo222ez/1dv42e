@@ -16,9 +16,6 @@
 	<section>
 		<article>
 			<h1>Alla kategorier</h1>
-			<pre>
-				{{ var_dump($category_products) }}
-			</pre>
 			<table id="tableProducts">
             	<thead>
                     <tr>

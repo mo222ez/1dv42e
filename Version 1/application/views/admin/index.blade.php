@@ -16,14 +16,14 @@
 	        Skicka gärna e-post eller ring oss. Låt oss sköta det tekniska så du kan fokusera på att sälja!</p>
 	    </article>
 	    <article class="startPageEvent">
-	    	@if($products)
+	    	@if($stocks)
 	    	    <p>Du har lågt lagersaldo på dessa produkter:</p>
 	    	@else
 	    		<p>Inga produkter har lågt lagersaldo</p>
 	    	@endif
 
-	    	@forelse ($products as $product)
-	    	    <span>{{ $product->name }}</span>
+	    	@forelse ($stocks as $stock)
+	    	    <span>{{ $stock->product->name }} - {{ $stock->value }} st i lager</span>
 	    	    <br/>
 	    	@empty
 	    	    <!-- <p>Inga produkter</p> -->

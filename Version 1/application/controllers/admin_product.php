@@ -26,7 +26,7 @@ class Admin_Product_Controller extends Base_Controller {
 								INNER JOIN productdetailtypes as pdt
 								ON pd.detailtype_id = pdt.id
 								ORDER BY id');*/
-		$products = Product::with('category')->get();
+		$products = Product::with(array('category', 'stock', 'tax'))->get();
 		//$products = Product::with(array('category', 'details'))->get();
 		$details = ProductDetail::with('detailtype')->order_by('product_id')->get();
 		$types = ProductDetailType::get();
@@ -92,22 +92,30 @@ class Admin_Product_Controller extends Base_Controller {
 	{
 		$categories = Category::lists('name', 'id');
 		$detailtypes = ProductDetailType::get();
-		$context = array('categories' => $categories, 'detailtypes' => $detailtypes);
+		$taxes = Tax::lists('value', 'id');
+		$context = array(
+			'categories' => $categories,
+			'detailtypes' => $detailtypes,
+			'taxes' => $taxes
+		);
 		return View::make('admin.product.new', $context);
 	}
 
 	public function action_create()
 	{
+		/*--- product ---*/
 		$new_product = array(
 			'name' => Input::get('name'),
 			'description' => Input::get('description'),
 			'articlenr' => Input::get('articelnr'),
-			'category_id' => Input::get('category')
+			'category_id' => Input::get('category'),
+			'tax_id' => Input::get('tax')
 		);
 
 		$product = new Product($new_product);
 		$product->save();
 
+		/*--- details ---*/
 		$detailtypes = ProductDetailType::get();
 		$details = array();
 
@@ -125,37 +133,20 @@ class Admin_Product_Controller extends Base_Controller {
 			}
 		}
 
+		/*--- stock ---*/
+		$new_stock = array(
+			'value' => Input::get('stock'),
+			'product_id' => $product->id
+		);
+
+		$stock = new Stock($new_stock);
+		$stock->save();
+
 		$context = array(
 			'product' => $product,
 			'details' => $details
 		);
-		//return View::make('admin.product.temp', $context);
 		return Redirect::to_route('admin_products');
-
-		/*$new_post = array(
-			'title' => Input::get('title'),
-			'content' => Input::get('content'),
-			'author_id' => Input::get('author_id')
-		);
-
-		$rules = array(
-			'title' => 'required|min:3|max:128',
-			'content' => 'required'
-		);
-
-		$v = Validator::make($new_post, $rules);
-
-		if ($v->fails()) {
-			return Redirect::to_route('new_post')
-				->with('user', Auth::user())
-				->with_errors($v)
-				->with_input();
-		}
-
-		$post = new Post($new_post);
-		$post->save();
-
-		return Redirect::to('view/' . $post->id);*/
 	}
 
 	public function action_delete($product_id)

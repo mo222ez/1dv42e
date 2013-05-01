@@ -19,4 +19,14 @@ class Product extends Eloquent
 	{
 		return $this->belongs_to('Category');
 	}
+
+	public function stock()
+	{
+		return $this->has_one('Stock');
+	}
+
+	public function tax()
+	{
+		return $this->belongs_to('Tax');
+	}
 }

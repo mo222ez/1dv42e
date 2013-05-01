@@ -1,7 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
 
-/* ---------- RESET CSS ----------------------------------------------------------------------------- */
+/* ------------------------------------------ */
+/* ----------------RESET CSS----------------- */
+/* ------------------------------------------ */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {	margin: 0;	padding: 0;	border: 0;	font-size: 100%;	font: inherit;	vertical-align: baseline;}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {	display: block;}
@@ -12,17 +14,22 @@ blockquote:before, blockquote:after,
 q:before, q:after {	content: '';	content: none;}
 table {	border-collapse: collapse;	border-spacing: 0;}
 
-
-
-/* -------------------------------------------------------------------------------------------------- */
-
+/* ------------------------------------------ */
+/* ------------------BASIC------------------- */
+/* ------------------------------------------ */
 body { 
 	background-image: url("../layout/1.jpg"); 
 	background-repeat: repeat; 
 	//background-color: #76c3cb;
 }
 
-/* -------------------------------------------------------------------------------------------------- */
+.left { float: left;}
+.right { float: right;}
+.center { text-align: center; margin: 0px auto 0px auto;}
+
+ol { list-style: disc; }
+
+/* ------------------------------------------ */
 #topWrapper {
 	background-color: #222222;
 	width: 100%; 
@@ -41,6 +48,8 @@ body {
 	}
 
 		#searchContainer {
+			height: 50px;
+			width: 300px;
 			color: #ffffff;
 			padding: 16px;
 			float: left;
@@ -48,6 +57,7 @@ body {
 
 		#cartContainer {
 			height: 50px;
+			width: 600px;
 			color: #ffffff;
 			float: right;
 			margin: 0px;
@@ -58,16 +68,7 @@ body {
 				padding: 0px;
 				float: right;
 			}
-
-			#cartContainer a#goToCart p {
-				margin: 0px;
-				padding: 6px 10px 0px 0px;
-				float: right;
-				color: #ffffff;
-				text-decoration: none;
-			}
-
-			#cartContainer a#goToCart:hover p { text-decoration: underline; }
+			
 
 /* ------------------------------------------ */
 .clearBottomContainers {
@@ -117,6 +118,23 @@ body {
 			float: right;
 		}
 
+			.headerList li{
+				margin-bottom: 8px;
+				color: #222222;
+			}
+
+			.headerList li:first-child{
+				margin-top: 6px;
+			}
+
+			.headerList li a {
+				color: #222222;				
+			}
+
+			.headerList li a:hover {
+				color: #4bc4f1;				
+			}
+
 	/* ------------------------------------------ */
 	/* ---------------- ---------------- */
 	/* ------------------------------------------ */
@@ -158,13 +176,11 @@ body {
 			}
 
 		#firstPageNews {
-			height: 300px;
+			height: 320px;
 			width: 758px;
 			background-image: url("../layout/imgNews2.jpg");
 			background-repeat: no-repeat;
 			margin-bottom: 20px;
-
-
 		}
 
 		
@@ -173,34 +189,57 @@ body {
 	/* ------------------FOOTER------------------ */
 	/* ------------------------------------------ */
 	footer {
-		background-color: #333333;
-		height: 260px;
+		background-color: #222222;
+		height: 300px;
 		width: 960px;
 		padding: 20px;
 		clear: both;
 	}
 		#footerInfo1 {
-			height: 80px;
-			width: 280px;
-			padding: 10px;
+			height: 100%;
+			width: 320px;
 			float: right;
 		}
 
 		#footerInfo2 {
-			height: 80px;
-			width: 280px;
-			padding: 10px;
+			height: 100%;
+			width: 299px;
+			padding-left: 20px;
 			float: right;
+			border-left: 1px solid #333333;
 		}
 
 		#footerInfo3 {
-			height: 80px;
-			width: 280px;
-			padding: 10px;
+			height: 100%;
+			width: 299px;
+			padding-left: 20px;
 			float: right;
+			border-left: 1px solid #333333;
 		}
-		
 
+		#footerInfo3 img {
+			margin-top: 20px;
+		}
 
+		.footerList {
+			padding-left: 20px;
+		}
 
+		.footerList li{
+				color: #ffffff; 
+				font-family: "Courier New", serif; 
+				font-size: 12pt;
+				margin-bottom: 10px;				
+			}
 
+			.footerList li:first-child{
+				margin-top: 6px;
+			}
+
+			.footerList li a {
+				color: #ffffff;				
+			}
+
+			.footerList li a:hover {
+				color: #4bc4f1;				
+			}

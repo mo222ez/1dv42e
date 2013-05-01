@@ -15,6 +15,7 @@ class Create_Products {
 			$table->text('description');
 			$table->string('articlenr');
 			$table->integer('category_id')->unsigned();
+			$table->integer('tax_id')->unsigned();
 			$table->timestamps();
 
 			$table->foreign('category_id')->references('id')->on('categories')->on_delete('restrict');

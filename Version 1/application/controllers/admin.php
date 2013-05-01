@@ -13,15 +13,17 @@ class Admin_Controller extends Base_Controller {
 		//$details = DB::query('SELECT * FROM productdetails WHERE detailtype_id = 3 AND value <= 10');
 		
 		//$products = Product::get();
-		$products = Product::with('details')
+		/*$products = Product::with('details')
 							->join('productdetails', 'products.id', '=', 'productdetails.product_id')
 							->where(function ($query)
 							{
 								$query->where('detailtype_id', '=', '3');
 								$query->where('value', '<=', DB::raw('10'));
-							})->get();
+							})->get();*/
+		$stocks = Stock::with('product')->where('value', '<=', DB::raw('10'))->get();
+		
 		$context = array(
-			'products' => $products
+			'stocks' => $stocks
 		);
 		return View::make('admin.index', $context);
 	}

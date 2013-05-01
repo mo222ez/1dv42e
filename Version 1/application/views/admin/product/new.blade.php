@@ -73,6 +73,32 @@
 		            <h3>Nåt är nog fel...</h3>
 		        @endforelse
 
+		        <!-- stock field -->
+			    <div class="inputWrapper">
+			        <div class="inputContainer">    
+				        <p>{{ Form::label('stock', 'Lager:') }}</p>
+				        {{ $errors->first('stock', '<p class="error">:message</p>') }}
+				        <p>{{ Form::text('stock', Input::old('stock')) }}</p>
+			        </div>
+		        	
+		        	<div class="helpText">
+		        		<p>Tillåtna tecken: [ 0-9 ] </p>
+	        		</div>
+	    		</div>
+
+	    		<!-- tax field -->
+	    		<div class="inputWrapper">
+			        <div class="inputContainer">
+						<p>{{ Form::label('tax', 'Moms:') }}</p>
+						{{ $errors->first('tax', '<p class="error">:message</p>') }}
+						<p>{{ Form::select('tax', $taxes) }}</p>
+					</div>
+		        	
+		        	<div class="helpText">
+		        		<p>Välj vilken moms produkten ska ha.</p>
+	        		</div>
+	    		</div>
+
 
 				<h2>Kategori</h2>
 
@@ -85,7 +111,7 @@
 					</div>
 		        	
 		        	<div class="helpText">
-		        		<p>Välj vilken kategori produkten ska hamn under.</p>
+		        		<p>Välj vilken kategori produkten ska hamna under.</p>
 	        		</div>
 	    		</div>
 
