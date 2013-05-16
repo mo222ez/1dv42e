@@ -1,74 +1,54 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
 |--------------------------------------------------------------------------
-|
-| Simply tell Laravel the HTTP verbs and URIs it should respond to. It is a
-| breeze to setup your application using Laravel's RESTful routing and it
-| is perfectly suited for building large applications and simple APIs.
-|
-| Let's respond to a simple GET request to http://example.com/hello:
-|
-|		Route::get('hello', function()
-|		{
-|			return 'Hello World!';
-|		});
-|
-| You can even respond to more than one URI:
-|
-|		Route::post(array('hello', 'world'), function()
-|		{
-|			return 'Hello World!';
-|		});
-|
-| It's easy to allow URI wildcards using (:num) or (:any):
-|
-|		Route::put('hello/(:any)', function($name)
-|		{
-|			return "Welcome, $name.";
-|		});
-|
 */
 
-/*Route::get('/', function()
-{
-	return View::make('home.index');
-});*/
+/*-----------------------------------*/
+/*---------------SHOP----------------*/
+/*-----------------------------------*/
+Route::get('/', array('as' => 'shop_start', 'uses' => 'shop@index'));
 
-Route::get('/', array('as' => 'home', 'uses' => 'home@index'));
+Route::get('/checkout', array('as' => 'checkout', 'uses' => 'shop@checkout'));
+Route::get('/viewCart', array('as' => 'viewCart', 'uses' => 'shop@viewCart'));
 
-/*----------ADMIN-----------*/
+/*-----------------------------------*/
+/*------------- END SHOP-------------*/
+/*-----------------------------------*/
 
+
+/*-----------------------------------*/
+/*---------------ADMIN---------------*/
+/*-----------------------------------*/
 Route::filter('pattern: admin*', 'auth');
 
 Route::get('admin', array('as' => 'admin', 'uses' => 'admin@index'));
 
-	/*----------ADMIN LOGIN-----------*/
 
+	/*----------ADMIN LOGIN-----------*/
 	Route::get('login', array('as' => 'login', 'uses' => 'admin@login_get'));
 
 	Route::post('login', array('as' => 'login', 'uses' => 'admin@login_post'));
 
 	Route::get('admin/logout', array('as' => 'admin_logout', 'uses' => 'admin@logout'));
 
-	/*----------END ADMIN LOGIN-------*/
 
 	/*----------ADMIN PRODUCTS-----------*/
-
 	Route::get('admin/products', array('as' => 'admin_products', 'uses' => 'admin_product@index'));
 
 	Route::get('admin/products/new', array('as' => 'admin_new_product', 'uses' => 'admin_product@new' ));
 
 	Route::post('admin/products/new', array('as' => 'admin_create_product', 'uses' => 'admin_product@create' ));
 
+	Route::get('admin/products/(:num)/edit', array('as' => 'admin_edit_product', 'uses' => 'admin_product@edit'));
+
+	Route::post('admin/products/(:num)/edit', array('as' => 'admin_edit_save_product', 'uses' => 'admin_product@edit_save'));
+
 	Route::delete('admin/products/(:num)', array('as' => 'admin_delete_product', 'uses' => 'admin_product@delete'));
 
-	/*----------END ADMIN PRODUCTS-------*/
 
 	/*----------ADMIN CATEGORIES-----------*/
-
 	Route::get('admin/categories', array('as' => 'admin_categories', 'uses' => 'admin_category@index'));
 
 	Route::get('admin/categories/new', array('as' => 'admin_new_category', 'uses' => 'admin_category@new'));
@@ -81,28 +61,20 @@ Route::get('admin', array('as' => 'admin', 'uses' => 'admin@index'));
 
 	Route::delete('admin/categories/(:num)', array('as' => 'admin_delete_category', 'uses' => 'admin_category@delete'));
 
-	/*----------END ADMIN CATEGORIES-------*/
 
 	/*----------ADMIN ORDERS-----------*/
-
 	Route::get('admin/orders', array('as' => 'admin_orders', 'uses' => 'admin@orders'));
 
-	/*----------END ADMIN ORDERS-------*/
-
+	
 	/*----------ADMIN CUSTOMERS-----------*/
-
 	Route::get('admin/customers', array('as' => 'admin_customers', 'uses' => 'admin@customers'));
 
-	/*----------END ADMIN CUSTOMERS-------*/
 
 	/*----------ADMIN STATISTICS-----------*/
-
 	Route::get('admin/statistics', array('as' => 'admin_statistics', 'uses' => 'admin@statistics'));
 
-	/*----------END ADMIN STATISTICS-------*/
 
 	/*----------ADMIN SETTINGS-----------*/
-
 	Route::get('admin/settings', array('as' => 'admin_settings', 'uses' => 'admin_settings@index'));
 	Route::get('admin/settings/profile', array('as' => 'admin_profile_settings', 'uses' => 'admin_settings@profile'));
 	Route::get('admin/settings/payment_methods', array('as' => 'admin_payment_methods_settings', 'uses' => 'admin_settings@payment_methods'));
@@ -111,9 +83,11 @@ Route::get('admin', array('as' => 'admin', 'uses' => 'admin@index'));
 	Route::get('admin/settings/tax', array('as' => 'admin_tax_settings', 'uses' => 'admin_settings@tax'));
 	Route::get('admin/settings/email', array('as' => 'admin_email_settings', 'uses' => 'admin_settings@email'));
 
-	/*----------END ADMIN SETTINGS-------*/
+/*-----------------------------------------*/
+/*--------------- END ADMIN----------------*/
+/*-----------------------------------------*/
 
-/*----------END ADMIN-------*/
+
 
 /*
 |--------------------------------------------------------------------------

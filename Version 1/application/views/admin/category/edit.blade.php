@@ -16,9 +16,8 @@
 	<section>
 		<article>
 			<h1>Redigera kategori: {{ $category->name }}</h1>
-			{{ Form::open() }}
+			{{ Form::open(URL::to_route('admin_edit_save_category', $category->id), 'POST', array('class' => 'styleForm')) }}
 				{{ Form::token() }}
-
 				{{ Form::hidden('category_id', $category->id) }}
 				<!-- name field -->
 		        <div class="inputWrapper">
@@ -34,7 +33,7 @@
 
 	    		<!-- submit button -->
 		        <div id='registerButton'>
-		        	{{ Form::submit('Spara den nya kategorin', array('class' => 'btn btn-success btn-XL', 'id' => 'register')) }}
+		        	{{ Form::submit('Spara kategorin', array('class' => 'btn btn-success btn-XL', 'id' => 'register')) }}
                 </div>
 
 		    {{ Form::close() }}

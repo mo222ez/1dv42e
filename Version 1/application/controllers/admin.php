@@ -14,7 +14,6 @@ class Admin_Controller extends Base_Controller {
 
 	public function action_login_get()
 	{
-		Asset::container('login')->add('login_css', 'css/login.css');
 		return view::make('admin.login');
 	}
 
@@ -38,7 +37,7 @@ class Admin_Controller extends Base_Controller {
 	public function action_logout()
 	{
 		Auth::logout();
-		return Redirect::to_route('home');
+		return Redirect::to_route('shop_start');
 	}
 
 	public function action_orders()

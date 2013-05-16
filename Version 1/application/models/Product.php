@@ -24,4 +24,14 @@ class Product extends Eloquent
 	{
 		return $this->belongs_to('Tax');
 	}
+
+	public function prices()
+	{
+		return $this->has_many('Price');
+	}
+
+	public function media()
+	{
+		return $this->has_many('Medium');
+	}
 }

@@ -8,7 +8,7 @@
 
 @section('main_content')
 	<section>
-	    <h1>Välkommen till din butik hos <span>(den registrerade titeln på webbshopen)</span></h1>
+	    <h1>Välkommen till <span>Gotteboet Retro</span></h1>
 	    
 	    <article class="startPageInfo">                    
 	        <p>Fri support via e-post och telefon där webbhotell med drift, e-post och backup ingår.

@@ -1,0 +1,308 @@
+/* @override 
+	http://localhost:8888/Dropbox/EXAMENS%20ARBETE/Git/Mark%20II/public/css/shop/checkout.css */
+
+/* ------------------------------------------ */
+/* ----------------CHECKOUT------------------ */
+/* ------------------------------------------ */
+span.title { font-weight: bold; color: #222222;}
+.showLable {}
+.showQuantity { float: left; }
+.editQuantity { float: right; text-decoration: underline;}
+.deleteProduct { width: 25px; margin: 0 auto; }
+
+/*#sortBar {
+	background-color: #333333;
+	height: 25px ;
+	width: 720px;
+	padding: 5px 20px 5px 20px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}*/
+
+.checkoutTitleBanner {
+	//background-color: #333333;
+	background-image: url("../../layout/greenbox.png");
+	background-repeat: repeat-x;
+	height: 35px ;
+	width: 720px;
+	padding: 5px 20px 5px 20px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+
+#checkoutTable { 
+	width: 758px; 
+	margin-bottom: 50px; 
+}
+
+#checkoutTable thead { 
+	height: 100px; 
+	font-weight: bold; 
+	color: #222222;  
+}
+
+#checkoutTable thead tr {}
+#checkoutTable thead tr th { 
+	border-bottom: 1px solid #333333; 
+	padding: 10px; 
+}
+
+#checkoutTable tbody { }
+#checkoutTable tbody tr.checkoutProduct { 
+	border-bottom: 1px solid #cccccc; 
+	padding: 20px;
+}
+
+#checkoutTable tbody tr.checkoutProduct td {
+ padding: 10px; 
+ vertical-align: middle; 
+ text-align: center; 
+}
+
+#checkoutTable tbody tr.checkoutProduct td:first-child { 
+	width: 80px;
+}
+
+#checkoutTable tbody tr.checkoutProduct td img { 
+	height: 50%;
+}
+
+#checkoutTable tbody tr.checkoutProduct td a { 
+	color: red; 
+	text-decoration: none; 
+}
+
+#checkoutTable tbody tr.checkoutProduct td a:hover { 
+	color: blue; 
+	text-align: center; 
+}
+
+#checkoutTotal { 
+	padding: 0px; 
+	display: table-row;
+}
+
+#checkoutShippingCost {}
+#checkoutServiceCharge {}
+
+#checkoutAllTotal { 
+	border-top: 2px solid #222222; 
+	border-bottom: none;	
+	background-color: #eeeeee; }
+
+#checkoutTotal td, 
+#checkoutShippingCost td, 
+#checkoutServiceCharge td {
+	border-bottom: 1px solid #eeeeee;
+	padding-right: 10px;
+}
+
+
+#checkoutTotal td p, 
+#checkoutShippingCost td p, 
+#checkoutServiceCharge td p, 
+#checkoutAllTotal td p {
+	float: right;
+	padding: 0px;
+}
+#checkoutAllTotal td p {
+	font-weight: bold; 
+	font-size: 15pt;
+	padding: 10px;
+}
+
+
+#checkoutTablePayment, 
+#checkoutTableShipping { 
+	width: 100%; margin-bottom: 50px; 
+}		
+
+#checkoutTablePayment tbody tr, 
+#checkoutTableShipping tbody tr {}
+
+#checkoutTablePayment tbody tr:last-child, 
+#checkoutTableShipping tbody tr:last-child { 
+	border-bottom: 1px solid #cccccc;
+}
+
+#checkoutTablePayment tbody tr td, 
+#checkoutTableShipping tbody tr td { 
+	vertical-align: middle; padding-bottom: 10px;
+}
+
+#checkoutTablePayment tbody tr td:first-child, 
+#checkoutTableShipping tbody tr td:first-child { 
+	width: 150px; 
+}
+
+#checkoutTablePayment tbody tr td:nth-child(2), 
+#checkoutTableShipping tbody tr td:nth-child(2) { 
+	width: 250px; 
+}
+
+#checkoutTablePayment tbody tr td:nth-child(3), 
+#checkoutTableShipping tbody tr td:nth-child(3) {
+	padding-right: 20px;
+}
+
+#checkoutTablePayment tbody tr td img, 
+#checkoutTableShipping tbody tr td img { 
+	max-height: 80%; 
+	vertical-align: text-top; 
+}
+
+#checkoutTablePayment tbody tr td label, 
+#checkoutTableShipping tbody tr td label { 
+	width: 250px; 
+	text-align: left; 
+}
+
+#checkoutTablePayment tbody tr.infoRow p, 
+#checkoutTableShipping tbody tr.infoRow p { 
+	-webkit-transition: height 0.25s ease-in-out; 
+	overflow: hidden; 
+	height: 150px; 
+}
+
+#checkoutTablePayment tbody tr.infoRow td p, 
+#checkoutTableShipping tbody tr.infoRow td p {}
+
+#checkoutTablePayment tbody tr.show p, 
+#checkoutTableShipping tbody tr.show p {}
+
+
+#checkoutTablePayment tbody tr.hidden p, 
+#checkoutTableShipping tbody tr.hidden p { 
+	height: 0px; 
+}
+
+
+
+.info { 
+	width: 100%; 
+	display: block; 
+	/*padding: 5px; */
+}
+
+.info a {
+	color: #4bc4f1;
+	text-decoration: none;
+}
+.info a:hover {
+	color: #4bc4f1;
+	text-decoration: underline;
+}
+
+.textMessage {  
+	padding-bottom: 20px; 
+	display: block;
+}
+
+/* ------------------------------------------ */
+/* -----------CHECKOUT FORMULÄRET------------ */
+/* ------------------------------------------ */
+form#checkoutForm {
+  width: 758px;
+  position: relative;
+  left: 20px;
+}
+
+label
+{	
+	font-family: Georgia;
+	text-align: right;
+	margin-right: 25px;
+	position: relative;
+	display: block;
+	width: 200px;
+	float: left;
+}
+
+#checkoutForm input.customerType {}
+
+#checkoutForm input.inputTextForm {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  	border:1px solid #ccc;
+  	font-size: 12px;
+  	width: 300px;
+  	min-height: 20px;
+  	display: block;
+  	margin-bottom: 15px;
+  	margin-top: 5px;
+  	outline: none;
+	position: relative;
+	padding: 3px 3px 3px 3px;
+	background-color: #eeeeee;
+	opacity: 0.75;
+}
+
+#checkoutForm select {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  	border: 1px solid #ccc;
+  	font-size: 12px;
+  	width: 308px;
+  	min-height: 20px;
+  	display: block;
+  	margin-bottom: 15px;
+  	margin-top: 5px;
+  	outline: none;
+	position: relative;
+	padding: 3px 3px 3px 3px;
+	background-color: #eeeeee;
+	opacity: 0.75;
+}
+
+#checkoutForm input.inputTextForm:focus {
+	box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+	background-color: #ffffff;
+}
+
+#checkoutForm select:focus {
+	box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+	background-color: #ffffff;
+}
+
+#checkoutForm input[type=submit] {
+  background-color: #4aae00;
+  padding:10px;
+}
+
+#checkoutForm input[type=radio] {
+  	width: auto;
+  	min-height: 5px;
+  	display: inherit;
+  	margin: 1px 10px 0px 0px;
+  	outline: none;
+	position: relative;
+	padding: 0px;
+	float: left;
+}
+
+#checkoutForm input[type=submit]:hover {
+ 	background-color: #54c402;
+	cursor: pointer;
+}
+
+ 
+#checkoutForm .inputCheckbox {	
+	float: left;
+	border: 10px solid black;
+	width: 20px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#checkoutForm .labelCheckbox {
+	font-family: Georgia;
+	text-align: left;
+	padding-left: 10px;
+	margin-right: 25px;
+	width: 600px;
+	float: left;
+}
+
+#checkoutForm .holderCheckbox {
+	height: 20px;
+	width: 700px;
+	margin-bottom: 10px;
+}

@@ -7,8 +7,18 @@
       </title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width">
-      {{ Asset::styles() }}
-      {{ Asset::scripts() }}
+      {{ Asset::container('admin')->styles() }}
+      {{ Asset::container('admin')->scripts() }}
+      <script type="text/javascript">
+        tinymce.init({
+            selector: "textarea",
+            plugins: [
+                "advlist autolink lists link image charmap print preview anchor",
+                "searchreplace visualblocks code fullscreen"
+            ],
+            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+        });
+      </script>
   </head>
   <body>
     <div id="topContainer">
@@ -22,13 +32,13 @@
       </div>
 
       <div id="topLink">
-        <a href="#.php">Öppna butiksdelen</a>
+        {{ HTML::link_to_route('shop_start', 'Öppna butiksdelen') }}
       </div>
 
 
     </div>
 
-    <header>Butiken.se</header>
+    <header>Gotteboet Retro</header>
       
     <div id="menuContainer">
       <nav id="mainMenu">
@@ -60,7 +70,7 @@
 
                         
         <div id="someone">
-        <p class="footerText">BUTIKEN.SE Copyright MaDEastman 2013</p>
+        <p class="footerText">BUTIKEN Copyright MaDEastman 2013</p>
       </div>
     </footer>       
   </body>

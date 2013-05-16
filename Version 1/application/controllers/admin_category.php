@@ -4,11 +4,11 @@ class Admin_Category_Controller extends Base_Controller {
 
 	public function action_index()
 	{
-		$categories = Category::get();
-		$category_products = Category::find(2)->products;
+		$categories = Category::with('products')->get();
+		//$category_products = Category::find(2)->products;
 		$context = array(
-			'categories' => $categories,
-			'category_products' => $category_products
+			'categories' => $categories
+			//'category_products' => $category_products
 		);
 		return View::make('admin.category.index', $context);
 	}

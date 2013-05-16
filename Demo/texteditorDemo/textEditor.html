@@ -1,0 +1,50 @@
+<!--<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>TinyMCE TEST</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <script type="text/javascript" src="tinymce/tinymce.min.js"></script>
+        <script type="text/javascript">
+        tinymce.init({
+            selector: "textarea"
+         });
+        </script>        
+    </head>
+    <body>
+        <form method="post">
+            <textarea></textarea>
+            <input type="submit" value="Vad Mikael vill ha ut"/>
+        </form>      
+    </body>
+</html>-->
+
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>TinyMCE TEST</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <script type="text/javascript" src="tinymce/tinymce.min.js"></script>
+        <script type="text/javascript">
+        tinymce.init({
+            selector: "textarea",
+            plugins: [
+                "advlist autolink lists link image charmap print preview anchor",
+                "searchreplace visualblocks code fullscreen"
+            ],
+            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+        });
+        </script>
+
+    </head>
+        <body>
+            <form method="post" action="tinyMCE.php" style="width: 900px">
+                <textarea name="content" style="width:100%"></textarea>
+                <input type="submit" value="Vad Mikael vill ha ut"/>
+            </form>
+
+        </body>
+</html>

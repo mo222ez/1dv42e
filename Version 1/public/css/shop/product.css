@@ -1,0 +1,84 @@
+/* ------------------------------------------ */
+/* ----------PRODUKTVISNING ENSTAKA---------- */
+/* ------------------------------------------ */
+
+/*- Hela listan -*/
+#singleProduct {			
+	width: 758px; 
+	height: 100%;
+	list-style: none;
+	overflow: hidden;
+	margin: 0px auto 0px auto;
+	padding-bottom: 50px;		
+}
+	
+	#singleProductImage {
+		min-height: 500px;
+		width: 352px;
+		overflow: hidden;
+		margin: 0px;
+		float: left;
+	}
+
+	#singleProductImage img {
+		border: 1px solid #cccccc;
+	}
+
+	#singleProductImageThumb {
+		width: 352px;
+	}
+
+	#singleProductImageThumb a.thumbNails {
+		width: 100px;
+		display: block;
+		float: left;
+		margin: 20px 25px 0px 0px;
+	}
+
+	#singleProductImageThumb a.thumbNails:nth-child(3n+3) {
+		margin-right: 0px;
+	}
+
+	.thumbNails {
+
+	}
+	
+	/*- Styling på boxen runt produktens beskrivning -*/
+	#singleProductDescription {
+		height: 100%;
+		width: 370px;
+		float: right;
+		padding: 0px 10px 0px 10px;						
+	}
+
+	#buyOptions {
+		background-color: #eeeeee;
+		padding: 10px;
+		border: 1px solid #cccccc;
+
+	}
+		#singleProductAllText {}
+
+	        #buyButton {
+	        	height: 40px;
+				width: 100%;
+				overflow: hidden;
+				margin-top: 30px;
+				clear: both;
+	        }                
+                
+	            /*- Styling på "Köp"-knappen -*/
+	           	#buyButton a.buyButton {
+					height: 40px;
+					width: 100%;
+					padding: 8px 128px 8px 128px;
+					position: relative;
+					top: 10px;
+					font-size: 13pt;
+					text-decoration: none;
+				}
+
+	#singleProductInformation {
+		margin-top: 20px;
+		border: 1px solid red;
+	}

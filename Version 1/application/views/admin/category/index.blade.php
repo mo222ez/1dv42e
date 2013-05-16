@@ -21,6 +21,7 @@
                     <tr>
                         <th>Id:</th>
                         <th>Namn:</th>
+                        <th>Antal produkter:</th>
                         <th>Edit:</th>
                         <th>Inställning:</th>
                     </tr>
@@ -30,6 +31,7 @@
                 	    <tr>
 	                        <td>{{ $category->id }}</td>
 	                        <td>{{ $category->name }}</td>
+	                        <td>{{ count($category->products) }}</td>
 	                        <td>
 	                        	<a href="{{ URL::to_route('admin_edit_category', $category->id) }}">
 	                        		{{ HTML::image('layout/edit.ico', 'editIcon', array('class' => 'tableIcon')) }}

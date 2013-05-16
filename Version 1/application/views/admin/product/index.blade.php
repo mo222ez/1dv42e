@@ -17,45 +17,52 @@
 	    <article>    
 	        
 	        <h3>Tillgängliga produkter</h3>
-	        
 	        @if($products)
         	    <table id="tableProducts">
 		        	<thead>
 		                <tr>
+		                	<th>Bild:</th>
 		                    <th>Art.nr:</th>
 		                    <th>Namn:</th>
 		                    <th>Kategori:</th>
-		                    <th>{{ $types[1]->name }}</th>
+		                    <th>Försälj. pris inkl. moms:</th>
 		                    
-		                    <th>{{ $types[3]->name }}</th>
+		                    <th>{{ $types[1]->name }}:</th>
 		                    <th>Lager</th>
 
-		                    <th>Moms</th>
-		                    <th>Edit:</th>
-		                    <th>Inställning:</th>
+		                    <th>Moms:</th>
+		                    <th>Redigera:</th>
+		                    <!-- <th>Inställning:</th> -->
 		                    <th>Ta bort</th>
 		                </tr>
 		            </thead>
 		            <tbody>
 		                @forelse ($products as $product)
 		                	<tr>
+		                		@if($product->media)
+		                			<td>{{ HTML::image('uploads/images/small/' . $product->media[0]->name, '', array('class' => 'productThumbnail')) }}</td>
+		                		@else
+		                			<td>Ingen bild</td>
+		                		@endif
 		                		<td>{{ $product->articlenr }}</td>
 			                    <td>{{ $product->name }}</td>
 			                    <td>{{ $product->category->name }}</td>
-			                    <td>{{ $sorted_details[$product->id][1]->value }} kr</td>
-			                    <td>{{ $sorted_details[$product->id][3]->value }} kg</td>
+			                    <!-- <td>{{ 10  * ($product->tax->value / 100) }}</td> -->
+			                    <td>{{ $product->prices[1]->value * (($product->tax->value / 100) + 1) }}</td>
+			                    <!-- <td>{{ $product->prices[1]->value }} kr</td> -->
+			                    <td>{{ $sorted_details[$product->id][1]->value }} g</td>
 			                    <td>{{ $product->stock->value }} st</td>
 			                    <td>{{ $product->tax->value }} %</td>
 			                    <td>
-			                    	<a href="#.html">
+			                    	<a href="{{ URL::to_route('admin_edit_product', $product->id) }}">
 			                    		{{ HTML::image('layout/edit.ico', 'editIcon', array('class' => 'tableIcon')) }}
 			                    	</a>
 			                    </td>
-			                    <td>
+			                    <!-- <td>
 			                    	<a href="#.html">
 			                    		{{ HTML::image('layout/settings.ico', 'settingsIcon', array('class' => 'tableIcon')) }}
 			                    	</a>
-			                    </td>
+			                    </td> -->
 
 			                    <td>
 			                    	{{ Form::open(URL::to_route('admin_delete_product', $product->id), 'DELETE') }}

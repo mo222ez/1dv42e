@@ -1,0 +1,1 @@
+<li><a href="{{ URL::to_route('admin_new_category') }}" class="{{ URI::is('admin/categories/new*') ? 'active' : '' }}">Lägg till en ny kategori</a></li>
